@@ -1,5 +1,3 @@
-let html = document.getElementsByTagName('html');
-console.log(html);
 let currentDayOfTheWeek = document.querySelector('.day');
 let currentUTCTime = document.querySelector('.time');
 
@@ -10,31 +8,13 @@ let date = new Date();
 let day = date.getDay();
 let month = date.getMonth();
 let year = date.getFullYear();
-
-let hour, minute, second, displayTime;
-hour = date.getUTCHours();
-minute = date.getUTCMinutes();
-second = date.getUTCSeconds();
+let calendar = `${days[day]}, ${date.getDate()} ${months[month]} ${year}`;
 
 // UTC Time
-// making seconds count in real time???
-function showTime(){
-let am_pm = "AM";
-if (hour >=12){
-    am_pm = "PM";
-}
-        else if(hour==0){
-            am_pm = "AM";
-        }
-    hour = hour < 10 ? "0" + hour : hour;
-    minute = minute < 10 ? "0" + minute : minute;
-    second = second < 10 ? "0" + second : second;
-    displayTime = `${hour}:${minute}:${second} ${am_pm}`;
+let nowTime = date.getTime();
 
-    currentUTCTime.textContent = displayTime;
+setInterval(an, 1000);
+function an(){
+    currentDayOfTheWeek.textContent = calendar;
+    currentUTCTime.textContent = nowTime;
 }
-
-document.body.onload = function(){
-    currentDayOfTheWeek.textContent = `${days[day]}, ${date.getDate()} ${months[month]} ${year}`;
-    showTime();
-};

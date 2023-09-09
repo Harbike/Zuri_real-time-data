@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .container{
     min-width: 300px;
@@ -37,7 +38,7 @@ img{
 .info{
     padding: 10px 25px 10px 25px;
     font-size: 1.0rem;
-    line-height: 1.5;
+    line-height: 1.8;
 }
 .githubURL{
     color: rgb(90, 66, 4);
