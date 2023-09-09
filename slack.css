@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    min-width: 300px;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.profile{
+    background-color: palegoldenrod;
+    width: 290px;
+    height: auto;
+    flex-direction: column;
+    border-radius: 20px;
+    cursor: default;
+}
+img{
+    width: 290px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.slackName{
+    color: #fff;
+    position: absolute;
+    font-size: 2.0rem;
+    transform: translate(20px, 330px);
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.1),
+    0 1px 10px rgba(0, 0, 0, 0.2),
+    0 1px 10px rgba(0, 0, 0, 0.3);
+}
+.info{
+    padding: 10px 25px 10px 25px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+.githubURL{
+    color: rgb(90, 66, 4);
+}
+
+/* reusable */
+.flex{
+    display: flex;
+}
+a{
+    text-decoration: none;
+}
+
+@media screen and (min-width: 850px){
+    .profile{
+        background-color: palegoldenrod;
+        width: 550px;
+        height: auto;
+        align-items: center;
+        flex-direction: row;
+        border-radius: 20px;
+        gap: 30px;
+    }
+    img{
+        width: 250px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 20px;
+    }
+    .slackName{
+        color: #350505;
+        font-size: 2.0rem;
+    transform: translate(300px, -100px);
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.021),
+    0 1px 10px rgba(0, 0, 0, 0.048),
+    0 1px 10px rgba(0, 0, 0, 0.3);
+    }
+}
