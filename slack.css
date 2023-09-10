@@ -5,44 +5,38 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .container{
-    min-width: 300px;
     width: 100%;
     height: 100vh;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     overflow: hidden;
+    padding: 10px;
+    flex-direction: column;
 }
 .profile{
-    background-color: palegoldenrod;
-    width: 300px;
     height: auto;
     flex-direction: column;
-    border-radius: 20px;
     cursor: default;
+    padding: 10px;
 }
 img{
-    width: 300px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
-.slackName{
-    color: #fff;
-    position: absolute;
-    font-size: 2.0rem;
-    transform: translate(20px, 330px);
-    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.1),
-    0 1px 10px rgba(0, 0, 0, 0.2),
-    0 1px 10px rgba(0, 0, 0, 0.3);
-}
 .info{
-    padding: 10px 25px 10px 25px;
+    width: 300px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.199);
     font-size: 1.0rem;
     line-height: 1.8;
 }
-.githubURL{
-    color: rgb(90, 66, 4);
+.slackName{
+    font-size: 1.6rem;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
+.githubURL{
+    color: rgb(24, 140, 163);
+}
+
+
 
 /* reusable */
 .flex{
@@ -52,28 +46,30 @@ a{
     text-decoration: none;
 }
 
-@media screen and (min-width: 850px){
+@media screen and (min-width: 600px){
     .profile{
-        width: 650px;
-        align-items: center;
         flex-direction: row;
-        gap: 30px;
-    }
-    img{
-        width: 250px;
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-        border-bottom-left-radius: 20px;
-    }
-    .slackName{
-        color: #350505;
-        font-size: 2.0rem;
-    transform: translate(300px, -100px);
-    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.021),
-    0 1px 10px rgba(0, 0, 0, 0.048),
-    0 1px 10px rgba(0, 0, 0, 0.3);
+        justify-content: center;
+        margin-top: 30px;
+        gap: 10px;
     }
     .info{
-        font-size: 1.2rem;
+        width: 50%;
+        font-size: 0.9rem;
+        line-height: 1.8;
+    }
+}
+@media screen and (min-width: 800px){
+    .profile{
+        justify-content: center;
+        flex-direction: row;
+        gap: 20px;
+    }
+     .info{
+        font-size: 1.1rem;
+        padding-left: 70px;
+    }
+    .slackName{
+        font-size: 2.0rem;
     }
 }
