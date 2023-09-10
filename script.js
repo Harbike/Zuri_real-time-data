@@ -1,20 +1,23 @@
-let currentDayOfTheWeek = document.querySelector('.day');
-let currentUTCTime = document.querySelector('.time');
-
 let months= ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 let days= ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thurday', 'Friday', 'Saturday'];
 
-let date = new Date();
-let day = date.getDay();
-let month = date.getMonth();
-let year = date.getFullYear();
-let calendar = `${days[day]}, ${date.getDate()} ${months[month]} ${year}`;
+function updateTime(){
+const currentUTCTime = document.querySelector('.time');
 
-// UTC Time
-let nowTime = date.getTime();
+const now = new Date();
+const formattedTime = now.getTime();
+currentUTCTime.textContent = formattedTime;
+updateDate();
+}
+setInterval(updateTime, 1000);
+updateTime();
 
-setInterval(an, 1000);
-function an(){
+function updateDate(){
+    const currentDayOfTheWeek = document.querySelector('.day');
+    const now = new Date();
+    let day = now.getDay();
+    let month = now.getMonth();
+    let year = now.getFullYear();
+    let calendar = `${days[day]}, ${now.getDate()} ${months[month]} ${year}`;
     currentDayOfTheWeek.textContent = calendar;
-    currentUTCTime.textContent = nowTime;
 }
